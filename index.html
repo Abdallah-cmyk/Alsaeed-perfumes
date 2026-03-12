@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مجموعة السعيد التجارية - الصفحة الرئيسية</title>
+    <title>مجموعة السعيد التجارية</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
-    <h1>مجموعة السعيد التجارية</h1>
-    <p>عالم العطور والبخور الفاخر</p>
-</header>
+    <header class="header">
+        <h1>مجموعة السعيد التجارية</h1>
+        <p>عالم العطور والبخور الفاخر</p>
+    </header>
 
-<nav class="nav-menu">
-    <div class="nav-item" data-section="bakhoor">البخور</div>
-    <div class="nav-item" data-section="perfumes">العطور</div>
-    <div class="nav-item" data-section="musk">المسك</div>
-    <div class="nav-item" data-section="burners">المبخرة الذكية</div>
-    <div class="nav-item" data-section="gifts">مجموعات الهدايا</div>
-</nav>
+    <nav class="nav-menu">
+        <div class="nav-item" onclick="showSection('perfumes')">العطور</div>
+        <div class="nav-item" onclick="showSection('incense')">البخور</div>
+        <div class="nav-item" onclick="showSection('musk')">المسك</div>
+        <div class="nav-item" onclick="showSection('body')">معطرات الجسم</div>
+    </nav>
 
-<section id="section-container" class="products-grid">
-    <!-- سيتم ملء المنتجات هنا بواسطة script.js -->
-</section>
+    <main>
+        <div id="products-container"></div>
+    </main>
 
-<footer class="footer">
-    © 2026 مجموعة السعيد التجارية - جميع الحقوق محفوظة | 
-    📞 01003500353 | 📱 واتساب: 01055880061
-</footer>
+    <footer class="footer">
+        📞 الهاتف: 01003500353 | 📱 واتساب: 01055880061 <br>
+        © 2026 مجموعة السعيد التجارية - جميع الحقوق محفوظة
+    </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

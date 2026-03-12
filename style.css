@@ -1,18 +1,17 @@
 body{
 font-family:'Tajawal',sans-serif;
 margin:0;
-background:#f6f6f6;
-color:#222;
+background:#f5f5f5;
 direction:rtl
 }
 
 header{
 background:#111;
 color:white;
-padding:20px;
 display:flex;
 justify-content:space-between;
-align-items:center
+align-items:center;
+padding:18px 40px
 }
 
 .logo{
@@ -23,35 +22,43 @@ font-weight:bold
 nav a{
 color:white;
 margin:0 12px;
-text-decoration:none;
-font-size:15px
+text-decoration:none
 }
 
 .hero{
 height:420px;
 background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url(https://i.postimg.cc/7YpwCwgD/rwʿtalshrq-1-2048x1192.jpg);
+url(https://i.postimg.cc/7YpwCwS1/ʿnbr-mlky-1.jpg);
 background-size:cover;
 display:flex;
-align-items:center;
 justify-content:center;
-color:white;
-text-align:center
+align-items:center;
+text-align:center;
+color:white
 }
 
 .hero h1{
 font-size:40px
 }
 
+.hero-buttons a{
+background:#25D366;
+color:white;
+padding:12px 20px;
+margin:10px;
+border-radius:8px;
+text-decoration:none
+}
+
 .section-title{
 text-align:center;
-font-size:30px;
-margin:50px 0 30px
+font-size:32px;
+margin:50px 0
 }
 
 .products-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 gap:25px;
 padding:40px
 }
@@ -60,17 +67,17 @@ padding:40px
 background:white;
 border-radius:15px;
 overflow:hidden;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
+box-shadow:0 10px 25px rgba(0,0,0,.08);
 transition:.3s
 }
 
 .product-card:hover{
-transform:translateY(-10px)
+transform:translateY(-8px)
 }
 
 .product-card img{
 width:100%;
-height:230px;
+height:220px;
 object-fit:cover
 }
 
@@ -80,38 +87,33 @@ text-align:center
 }
 
 .product-info h3{
-margin:5px 0;
-font-size:20px
+margin:5px 0
 }
 
 .product-desc{
 font-size:14px;
-color:#555
+color:#666
 }
 
 .order-btn{
-display:inline-block;
-margin-top:10px;
 background:#25D366;
 color:white;
-padding:10px 18px;
-border-radius:8px;
-text-decoration:none
+padding:8px 16px;
+border-radius:6px;
+text-decoration:none;
+display:inline-block;
+margin-top:10px
 }
 
-.filter-bar{
-text-align:center;
-margin-top:20px
+.category{
+margin-top:60px
 }
 
-.filter-bar button{
-padding:8px 15px;
-border:none;
+.category h2{
 background:#111;
 color:white;
-margin:4px;
-border-radius:6px;
-cursor:pointer
+padding:14px;
+margin:0
 }
 
 footer{
@@ -119,5 +121,5 @@ background:#111;
 color:white;
 text-align:center;
 padding:25px;
-margin-top:50px
+margin-top:60px
 }

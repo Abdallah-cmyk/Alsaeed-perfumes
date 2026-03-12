@@ -1,26 +1,95 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منتجات مجموعة السعيد</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>المنتجات</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="header">
-    <h1>منتجات مجموعة السعيد</h1>
+<header>
+<div class="logo">Vegas</div>
+<nav>
+<a href="index.html">الرئيسية</a>
+<a href="products.html">المنتجات</a>
+<a href="about.html">عن الشركة</a>
+</nav>
 </header>
 
-<main>
-    <div id="all-products-container"></div>
-</main>
+<h2 class="section-title">منتجاتنا</h2>
 
-<footer class="footer">
-    📞 الهاتف: 01003500353 | 📱 واتساب: 01055880061 <br>
-    © 2026 مجموعة السعيد التجارية - جميع الحقوق محفوظة
-</footer>
+<div class="filter-bar">
+
+<button onclick="filterProducts('all')">الكل</button>
+
+<button onclick="filterProducts('bukhoor')">بخور</button>
+
+<button onclick="filterProducts('incense')">مخاريط</button>
+
+<button onclick="filterProducts('decor')">ديكور</button>
+
+</div>
+
+<section class="products-grid">
+
+<div class="product-card bukhoor">
+<img src="https://i.postimg.cc/3xSjjfJB/1664832789631-1-1-768x480.jpg">
+<div class="product-info">
+<h3>بخور فاخر</h3>
+<p class="product-desc">بخور شرقي فاخر يدوم طويلاً</p>
+<a class="order-btn" href="https://wa.me/201000000000">اطلب الآن</a>
+</div>
+</div>
+
+<div class="product-card incense">
+<img src="https://i.postimg.cc/Gm7PPghS/Cubes-Incense-v-1-(1).jpg">
+<div class="product-info">
+<h3>مكعبات البخور</h3>
+<p class="product-desc">مكعبات بخور مركزة</p>
+<a class="order-btn" href="https://wa.me/201000000000">اطلب الآن</a>
+</div>
+</div>
+
+<div class="product-card incense">
+<img src="https://i.postimg.cc/0y2dw1xb/Vegas-Backflow-Incense-Cones-1-(1).jpg">
+<div class="product-info">
+<h3>مخاريط بخور</h3>
+<p class="product-desc">مخاريط بخور للشلالات</p>
+<a class="order-btn" href="https://wa.me/201000000000">اطلب الآن</a>
+</div>
+</div>
+
+<div class="product-card decor">
+<img src="https://i.postimg.cc/ZqmmcH7P/shlal-kbyr.jpg">
+<div class="product-info">
+<h3>شلال بخور كبير</h3>
+<p class="product-desc">قطعة ديكور رائعة</p>
+<a class="order-btn" href="https://wa.me/201000000000">اطلب الآن</a>
+</div>
+</div>
+
+<div class="product-card decor">
+<img src="https://i.postimg.cc/Jh88qx6p/shlal-mdrj.jpg">
+<div class="product-info">
+<h3>شلال مدرج</h3>
+<p class="product-desc">تصميم أنيق للشلال</p>
+<a class="order-btn" href="https://wa.me/201000000000">اطلب الآن</a>
+</div>
+</div>
+
+<div class="product-card decor">
+<img src="https://i.postimg.cc/Bv33gpYp/shlal-wrq-shjr.jpg">
+<div class="product-info">
+<h3>شلال ورق الشجر</h3>
+<p class="product-desc">ديكور مع بخور متدفق</p>
+<a class="order-btn" href="https://wa.me/201000000000">اطلب الآن</a>
+</div>
+</div>
+
+</section>
 
 <script src="script.js"></script>
+
 </body>
 </html>

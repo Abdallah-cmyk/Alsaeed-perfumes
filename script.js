@@ -1,69 +1,71 @@
-const products = {
-    fragrance: [
-        {title: "Bleu de Chanel", desc: "بلو دي شانيل - عطر فرنسي أصلي", price: 1250, img: "https://via.placeholder.com/150?text=Bleu+de+Chanel"},
-        {title: "Khamrah", desc: "خمرة - عطر لطافة الفاخر", price: 650, img: "https://via.placeholder.com/150?text=Khamrah"}
-    ],
-    incense: [
-        {title: "Vegas Stick", desc: "أعواد البخور الفاخرة - عود السديم", price: 180, img: "https://via.placeholder.com/150?text=Vegas+Stick"},
-        {title: "Vegas Cubes", desc: "مكعبات بخور فاخرة", price: 220, img: "https://via.placeholder.com/150?text=Vegas+Cubes"},
-        {title: "Vegas Bullet", desc: "بخور عالي التركيز عبق العود", price: 350, img: "https://via.placeholder.com/150?text=Vegas+Bullet"}
-    ],
-    musk: [
-        {title: "Musk Al-Aroosa", desc: "طقم مسك العروسة 3×30 مل", price: 450, img: "https://via.placeholder.com/150?text=Musk+Al-Aroosa"}
-    ],
-    latifa: [
-        {title: "Latifa Collection", desc: "عطر لطافة الفاخر", price: 550, img: "https://via.placeholder.com/150?text=Latifa+Collection"}
-    ],
-    smart: [
-        {title: "Backflow Incense Burner", desc: "المبخرة الذكية التدفق العكسي", price: 800, img: "https://via.placeholder.com/150?text=Backflow+Burner"}
-    ]
-};
+// بيانات المنتجات
+const products = [
+    {
+        id:1, category:"incense", title:"Vegas Stick Collection", desc:"أعواد بخور طويلة الأمد تتميز بروائح شرقية غنية.", price:180, img:"https://via.placeholder.com/150"
+    },
+    {
+        id:2, category:"incense", title:"Vegas Cubes", desc:"مجموعة مكعبات بخور مضغوطة بأفضل الزيوت العطرية.", price:200, img:"https://via.placeholder.com/150"
+    },
+    {
+        id:3, category:"incense", title:"Vegas Bullet Collection", desc:"بخور عالي التركيز في عبوات أنيقة.", price:250, img:"https://via.placeholder.com/150"
+    },
+    {
+        id:4, category:"musk", title:"Musk Al-Aroosa", desc:"طقم مسك العروسة 3×30 مل.", price:450, img:"https://via.placeholder.com/150"
+    },
+    {
+        id:5, category:"perfumes", title:"Bleu de Chanel", desc:"بلو دي شانيل - عطر فرنسي أصلي.", price:1250, img:"https://via.placeholder.com/150"
+    },
+    {
+        id:6, category:"body", title:"Body Splash Collection", desc:"معطرات جسم خفيفة ومنعشة.", price:300, img:"https://via.placeholder.com/150"
+    }
+];
 
-const grid = document.getElementById("products-grid");
-const allGrid = document.getElementById("all-products-grid");
-
-function showProducts(section) {
-    grid.innerHTML = "";
-    products[section].forEach(p => {
-        const card = document.createElement("div");
-        card.className = "product-card";
-        card.innerHTML = `
-            <div class="product-image"><img src="${p.img}" alt="${p.title}" style="border-radius:50%; width:100%; height:100%; object-fit:cover;"></div>
+// عرض المنتجات حسب القسم
+function showSection(category){
+    const container = document.getElementById("products-container");
+    if(!container) return;
+    container.innerHTML="";
+    const filtered = products.filter(p=>p.category===category);
+    filtered.forEach(p=>{
+        const card=document.createElement("div");
+        card.className="product-card";
+        card.innerHTML=`
+            <div class="product-image"><img src="${p.img}" alt="${p.title}" width="150"></div>
             <h3 class="product-title">${p.title}</h3>
             <p class="product-desc">${p.desc}</p>
             <div class="product-price"><span>جنيه</span> ${p.price}</div>
-            <button class="btn">عرض المنتج</button>
+            <button class="btn" onclick="window.location='product.html?id=${p.id}'">عرض المنتج</button>
         `;
-        grid.appendChild(card);
+        container.appendChild(card);
     });
 }
 
-function showAllProducts() {
-    if (!allGrid) return;
-    Object.keys(products).forEach(section => {
-        products[section].forEach(p => {
-            const card = document.createElement("div");
-            card.className = "product-card";
-            card.innerHTML = `
-                <div class="product-image"><img src="${p.img}" alt="${p.title}" style="border-radius:50%; width:100%; height:100%; object-fit:cover;"></div>
-                <h3 class="product-title">${p.title}</h3>
-                <p class="product-desc">${p.desc}</p>
-                <div class="product-price"><span>جنيه</span> ${p.price}</div>
-                <button class="btn">عرض المنتج</button>
-            `;
-            allGrid.appendChild(card);
-        });
+// عرض كل المنتجات في products.html
+const allContainer = document.getElementById("all-products-container");
+if(allContainer){
+    products.forEach(p=>{
+        const card=document.createElement("div");
+        card.className="product-card";
+        card.innerHTML=`
+            <div class="product-image"><img src="${p.img}" alt="${p.title}" width="150"></div>
+            <h3 class="product-title">${p.title}</h3>
+            <p class="product-desc">${p.desc}</p>
+            <div class="product-price"><span>جنيه</span> ${p.price}</div>
+            <button class="btn" onclick="window.location='product.html?id=${p.id}'">عرض المنتج</button>
+        `;
+        allContainer.appendChild(card);
     });
 }
 
-// عرض جميع المنتجات عند الدخول على صفحة products.html
-showAllProducts();
-
-// التعامل مع أقسام nav
-document.querySelectorAll(".nav-item").forEach(item => {
-    item.addEventListener("click", () => {
-        const section = item.getAttribute("data-section");
-        showProducts(section);
-        window.scrollTo({top: grid.offsetTop, behavior: "smooth"});
-    });
-});
+// عرض المنتج المفصل
+const urlParams = new URLSearchParams(window.location.search);
+const prodId = urlParams.get('id');
+if(prodId){
+    const prod = products.find(p=>p.id==prodId);
+    if(prod){
+        document.getElementById("product-title").innerText = prod.title;
+        document.getElementById("product-desc").innerText = prod.desc;
+        document.getElementById("product-price").innerHTML = `<span>جنيه</span> ${prod.price}`;
+        document.getElementById("product-image").innerHTML = `<img src="${prod.img}" alt="${prod.title}" width="250">`;
+    }
+}

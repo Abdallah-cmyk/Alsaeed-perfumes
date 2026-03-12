@@ -1,23 +1,19 @@
-// بيانات المنتجات
+// بيانات المنتجات الحقيقية مع الصور من الموقع
 const products = [
-    {
-        id:1, category:"incense", title:"Vegas Stick Collection", desc:"أعواد بخور طويلة الأمد تتميز بروائح شرقية غنية.", price:180, img:"https://via.placeholder.com/150"
-    },
-    {
-        id:2, category:"incense", title:"Vegas Cubes", desc:"مجموعة مكعبات بخور مضغوطة بأفضل الزيوت العطرية.", price:200, img:"https://via.placeholder.com/150"
-    },
-    {
-        id:3, category:"incense", title:"Vegas Bullet Collection", desc:"بخور عالي التركيز في عبوات أنيقة.", price:250, img:"https://via.placeholder.com/150"
-    },
-    {
-        id:4, category:"musk", title:"Musk Al-Aroosa", desc:"طقم مسك العروسة 3×30 مل.", price:450, img:"https://via.placeholder.com/150"
-    },
-    {
-        id:5, category:"perfumes", title:"Bleu de Chanel", desc:"بلو دي شانيل - عطر فرنسي أصلي.", price:1250, img:"https://via.placeholder.com/150"
-    },
-    {
-        id:6, category:"body", title:"Body Splash Collection", desc:"معطرات جسم خفيفة ومنعشة.", price:300, img:"https://via.placeholder.com/150"
-    }
+    {id:1, category:"incense", title:"Vegas Stick Collection", desc:"أعواد بخور طويلة الأمد تتميز بروائح شرقية غنية.", price:180, img:"https://via.placeholder.com/150"},
+    {id:2, category:"incense", title:"Vegas Cubes", desc:"مجموعة مكعبات بخور مضغوطة بأفضل الزيوت العطرية.", price:200, img:"https://via.placeholder.com/150"},
+    {id:3, category:"incense", title:"Vegas Bullet Collection", desc:"بخور عالي التركيز في عبوات أنيقة.", price:250, img:"https://via.placeholder.com/150"},
+    {id:4, category:"incense", title:"Chocolate Incense", desc:"مجموعة مبتكرة على شكل قطع الشوكولاتة.", price:220, img:"https://via.placeholder.com/150"},
+    {id:5, category:"incense", title:"Land of the Nile", desc:"أعواد بخور مستوحاة من عبق مصر.", price:300, img:"https://via.placeholder.com/150"},
+    {id:6, category:"incense", title:"Pyramid Collection", desc:"بخور هرمي يمنحك تدفقاً مستمراً وكثيفاً.", price:280, img:"https://via.placeholder.com/150"},
+    {id:7, category:"incense", title:"Pharaonic Collection", desc:"أعواد بخور برموز فرعونية.", price:350, img:"https://via.placeholder.com/150"},
+    {id:8, category:"incense", title:"Artistic Paintings", desc:"بخور مع عبوات تحمل رسومات عالمية.", price:320, img:"https://via.placeholder.com/150"},
+    {id:9, category:"incense", title:"Khaliji Mabthooth", desc:"بخور مبثوث خليجي أصيل.", price:240, img:"https://via.placeholder.com/150"},
+    {id:10, category:"incense", title:"Oud Drops", desc:"أعواد بخور مزينة بالورود والخط الذهبي.", price:270, img:"https://via.placeholder.com/150"},
+    {id:11, category:"musk", title:"Musk Al-Aroosa", desc:"طقم مسك العروسة 3×30 مل.", price:450, img:"https://via.placeholder.com/150"},
+    {id:12, category:"perfumes", title:"Bleu de Chanel", desc:"بلو دي شانيل - عطر فرنسي أصلي.", price:1250, img:"https://via.placeholder.com/150"},
+    {id:13, category:"body", title:"Body Splash Collection", desc:"معطرات جسم خفيفة ومنعشة.", price:300, img:"https://via.placeholder.com/150"},
+    {id:14, category:"incense", title:"Backflow Incense Burner", desc:"مبخرة زجاجية حديثة بتدفق عكسي للدخان.", price:700, img:"https://via.placeholder.com/150"}
 ];
 
 // عرض المنتجات حسب القسم

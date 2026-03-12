@@ -3,16 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>منتجات السعيد</title>
+<title>المنتجات - مجموعة السعيد</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<h1>منتجات القسم</h1>
+<header class="header">
+    <h1>منتجات مجموعة السعيد</h1>
+    <p>العطور والبخور الفاخر</p>
 </header>
 
-<div id="products" class="products"></div>
+<div class="products-grid" id="products-grid">
+    <!-- المنتجات سيتم إدراجها ديناميكيًا بواسطة script.js -->
+</div>
+
+<!-- أيقونة السلة -->
+<div class="cart">
+    🛒 السلة: <span id="cart-count">0</span>
+</div>
 
 <script src="script.js"></script>
 </body>

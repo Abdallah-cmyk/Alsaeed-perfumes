@@ -3,55 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مجموعة السعيد للعطور والبخور</title>
+<title>مجموعة السعيد التجارية - متجر فاخر</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<div class="logo">مجموعة السعيد</div>
-<nav>
-<a href="index.html">الرئيسية</a>
-<a href="#categories">الأقسام</a>
-</nav>
+<!-- الهيدر -->
+<header class="header">
+    <h1>مجموعة السعيد التجارية</h1>
+    <p>عالم العطور والبخور الفاخر</p>
 </header>
 
-<section class="hero">
-<h1>عالم العطور والبخور الفاخر</h1>
-<p>منتجات عطور وبخور شرقية فاخرة</p>
-</section>
+<!-- شريط الأقسام -->
+<nav class="nav-menu">
+    <div class="nav-item" data-category="bakhoor">البخور</div>
+    <div class="nav-item" data-category="perfumes">العطور</div>
+    <div class="nav-item" data-category="body-splash">معطرات الجسم</div>
+    <div class="nav-item" data-category="incense-burners">المبخرة الذكية</div>
+</nav>
 
-<section id="categories">
-<h2>الأقسام</h2>
-<div class="categories">
-
-<a href="products.html?cat=bakhoor" class="cat">
-<img src="https://via.placeholder.com/200x160.png?text=البخور" alt="البخور">
-<h3>البخور</h3>
-</a>
-
-<a href="products.html?cat=perfume" class="cat">
-<img src="https://via.placeholder.com/200x160.png?text=العطور" alt="العطور">
-<h3>العطور</h3>
-</a>
-
-<a href="products.html?cat=incense" class="cat">
-<img src="https://via.placeholder.com/200x160.png?text=أعواد+البخور" alt="أعواد البخور">
-<h3>أعواد البخور</h3>
-</a>
-
-<a href="products.html?cat=body" class="cat">
-<img src="https://via.placeholder.com/200x160.png?text=معطرات+الجسم" alt="معطرات الجسم">
-<h3>معطرات الجسم</h3>
-</a>
-
+<!-- أيقونة السلة -->
+<div class="cart">
+    🛒 السلة: <span id="cart-count">0</span>
 </div>
-</section>
 
-<footer>
-<p>📞 الهاتف: 01003500353</p>
-<p>📱 واتساب: 01055880061</p>
-</footer>
+<!-- روابط لصفحة المنتجات -->
+<div class="products-section">
+    <p>اضغط على أي قسم لعرض المنتجات الفاخرة</p>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
